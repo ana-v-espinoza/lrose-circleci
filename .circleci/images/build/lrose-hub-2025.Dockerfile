@@ -49,7 +49,8 @@ ADD gateway/environment.yml /tmp
 RUN mamba install --quiet --yes \
       'conda-forge::nb_conda_kernels' \
       'conda-forge::jupyter-server-proxy' \
-      'conda-forge::nbgitpuller' && \
+      'conda-forge::nbgitpuller' \
+      'conda-forge::ncview' && \
     mamba create --name lrose-hub-2025 -f /tmp/environment.yml && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \

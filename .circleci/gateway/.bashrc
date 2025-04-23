@@ -11,4 +11,5 @@ export PATH=/usr/local/lrose/bin:$PATH
 
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lrose/lib
 
-
+# init conda and activate base environment
+eval "$(conda shell.bash hook)"
